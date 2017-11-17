@@ -27,7 +27,7 @@ public class Alunos implements Crud{
 	}
 	
 	//metodo para cadastrar um aluno no array "a" de Alunos
-	public static void cadastrar() {
+	public void cadastrar() {
 		//criando o aluno para cadastrar no array "a" de Alunos
 		Alunos aluno = new Alunos();
 		
@@ -50,12 +50,12 @@ public class Alunos implements Crud{
 	}
 	
 	//metodo para excluir um aluno, do array "a" de Alunos
-	public static void excluirAlunos() {
+	public void excluir() {
 		Servicos.excluir(listAlunos, "Digite o nome do aluno para ser excluido");
 	}
 	
 	//metodo para excluir um aluno, do array "a" de Alunos
-	public static void imprimirAlunos() {
+	public void imprimir() {
 		Servicos.imprimir(listAlunos);
 	}
 	
@@ -114,7 +114,7 @@ public class Alunos implements Crud{
 
 	@Override
 	public String pesquisar() {
-		return this.getMatricula();
+		return this.getNome();
 	}
 
 	public ArrayList<Crud> getList() {

@@ -26,7 +26,8 @@ public class Avaliacoes implements Crud {
 	}
 
 	//metodo para cadastrar um aluno no array "a" de Alunos
-	public static void cadastrarAvaliacao() {
+	@Override
+	public void cadastrar() {
 		//criando o avaliacao para cadastrar no array "a" de Alunos
 		Avaliacoes avaliacao = new Avaliacoes();
 		
@@ -53,12 +54,12 @@ public class Avaliacoes implements Crud {
 	
 		
 	//metodo para excluir um Avaliacao, do array "avaliacoes" de Avaliacao
-	public void excluirAvaliacao() {
+	public void excluir() {
 		Servicos.excluir(avaliacoes, "Nome da avaliacao, para ser excluida");
 	}
 
 	//metodo para imprimir um Avaliacao, do array "avaliacoes" de Avaliacao
-	public static void imprimirAvaliacao() {
+	public void imprimir() {
 		Servicos.imprimir(avaliacoes);
 	}
 
