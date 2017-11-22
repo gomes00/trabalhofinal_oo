@@ -23,11 +23,12 @@ public abstract class AlunoAvaliacao{
 		
 		populaNotas();
 		
-		aluno = (Alunos) Servicos.pesquisar(notas, "Digite a matricula do aluno que \nrecebera essa nota", aluno);
+		aluno = (Alunos) Servicos.pesquisar(notas, "Digite a nome do aluno que \nrecebera essa nota", aluno);
 		
 		avaliacao = (Avaliacoes) Servicos.pesquisar(notas, "Digite o nome da avaliacao que o "+aluno.getNome()+" conseguiu", avaliacao);
 		
 		nota = Valida.validaValor("Digite a nota do aluno "+aluno.getNome()+" recebeu na avaliacao "+avaliacao.getNome());
+		
 		avaliacao.setNotaAluno(nota);
 		
 		aluno.cadastraNotas(avaliacao);

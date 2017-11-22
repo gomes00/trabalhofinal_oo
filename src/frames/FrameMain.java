@@ -109,12 +109,13 @@ public class FrameMain {
 		frame.getContentPane().add(label_3, "cell 0 3,grow");
 		
 		JButton btnSair = new JButton("Sair");
-		btnAvaliacao.addActionListener(new ActionListener() {
+		frame.getContentPane().add(btnSair, "cell 1 3,grow");
+		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				frame.dispose();
 			}
 		});
-		frame.getContentPane().add(btnSair, "cell 1 3,grow");
+		
 	}
 
 }
